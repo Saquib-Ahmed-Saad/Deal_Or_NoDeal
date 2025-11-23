@@ -4,7 +4,7 @@ session_start();
 
 require_once 'functions.php';
 
-// ALWAYS ensure game is initialized when page loads
+// Always ensure game is initialized when page loads
 // This must happen BEFORE any other checks
 if (!isset($_SESSION['game_state']) || !isset($_SESSION['case_values'])) {
     startNewGame();
@@ -156,13 +156,6 @@ $gameState = $_SESSION['game_state'];
                     <div class="offer-panel">
                         <h2>The Banker's Offer</h2>
                         
-                        <?php if ($_SESSION['market_event'] !== null): ?>
-                            <!-- Market Event Display -->
-                            <div class="market-event">
-                                <?php echo $_SESSION['market_event']['msg']; ?>
-                            </div>
-                        <?php endif; ?>
-                        
                         <div class="offer-amount">
                             <?php echo formatMoney($_SESSION['current_offer']); ?>
                         </div>
@@ -268,7 +261,7 @@ $gameState = $_SESSION['game_state'];
             
         </div>
         
-        <!-- Last opened case reveal (if any) -->
+        <!-- Last opened case reveal if left -->
         <?php if ($gameState === 'open_round_cases' && $_SESSION['last_opened_case'] !== null): ?>
         <div class="last-reveal">
             <p>
