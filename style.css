@@ -434,18 +434,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Enhanced Feature Styles */
 
-/* Market Event Display */
-.market-event {
-    background: rgba(255,215,0,0.2);
-    border: 2px solid #ffd700;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    animation: slideDown 0.5s ease;
-}
 
 /* Banker Strategy Hint */
 .strategy-hint {
@@ -518,16 +507,6 @@ footer {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 10px;
-    animation: wiggle 1s ease-in-out infinite;
-}
-
-@keyframes wiggle {
-    0%, 100% {
-        transform: rotate(-3deg);
-    }
-    50% {
-        transform: rotate(3deg);
-    }
 }
 
 .vs {
