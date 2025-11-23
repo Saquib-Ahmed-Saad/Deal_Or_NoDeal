@@ -8,18 +8,18 @@ Players choose a briefcase and progressively open other cases while the Banker m
 
 # Project Structure
 
-```
+
 Deal_Or_NoDeal/
-│
-├── index.php          # Homepage with game intro and start button
-├── game.php           # Main game board (handles all gameplay)
-├── result.php         # Final results screen
-├── about.php          # Rules, info, and team details
-├── config.php         # Game configuration (money values, rounds)
-├── functions.php      # All game logic functions
-├── style.css          # Complete styling with animations
-└── README.md          # This file
-```
+ -index.php          # Homepage with game intro and start button
+ -game.php           # Main game board (handles all gameplay)
+ -result.php         # Final results screen
+ -about.php          # Rules, info, and team details
+ -config.php         # Game configuration (money values, rounds)
+ -introduction.php   # A seperate introduction page
+ -functions.php      # All game logic functions
+ -style.css          # Complete styling with animations
+ -README.md          # This file
+
 
 # How It Works
 
@@ -41,22 +41,17 @@ Progressive Rounds: Round 1 opens 5 cases, Round 2 opens 4 cases, Round 3 opens 
 
 Enhanced Features (Added)
 
-1. Volatile Market Events
-   20% chance each round for market events that alter values or offers
-   Events include bull market, bear market, generous banker, or stingy banker
-   Modifies offers by 10-15%
-
-2. Banker Strategic Offers
+1. Banker Strategic Offers
    Three strategies: neutral, bluff (20% higher), pressure (20% lower)
    Offer history tracking in session
    Offer expiration system (expires next round)
 
-3. Progressive Value Revelation
+2. Progressive Value Revelation
    Starting Round 3, shows minimum and maximum value range
    Intelligence Report displayed on offer screen
    Helps player make informed decisions
 
-4. Dynamic Round Structure
+3. Dynamic Round Structure
    Non-linear progression (5, 4, 3, 2, 1 cases per round)
    Bonus round system with 20% trigger chance
    Configurable in config.php
@@ -85,18 +80,6 @@ Responsive design with media queries
 Modern gradient backgrounds
 Backdrop filters for glassmorphism effect
 
-# How to Run
-
-Requirements:
-PHP 7.4+ installed
-Web server (Apache/Nginx) or use PHP's built-in server
-
-Using PHP Built-in Server:
-cd Deal_Or_NoDeal
-php -S localhost:8000
-
-Open in Browser:
-http://localhost:8000/index.php
 
 # Project Requirements Covered
 
@@ -110,7 +93,6 @@ CSS styling and animations
 Responsive web design
 User experience design
 Code organization (separate config, functions, pages)
-Volatile market events
 Banker strategic offers with history tracking
 Progressive value revelation
 Dynamic round structure
@@ -152,13 +134,6 @@ Reject all offers until final 2 cases
 Final choice: Keep vs Swap
 Play Again button works
 Mobile responsiveness
-Market events appear randomly
 Banker strategy hints display
 Value revelation appears after Round 3
 Offer expiration warnings show
-
-
-
-
-
-
