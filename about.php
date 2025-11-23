@@ -98,24 +98,18 @@
             <h2>Development Team</h2>
             <div class="team-grid">
                 <div class="team-member">
-                    <h3>Team Member 1</h3>
-                    <p>Role: Developer</p>
-                    <p style="color: #ccc; font-size: 0.9rem;">Game logic & backend</p>
+                    <h3>Saquib S. Ahmed</h3>
+                    <p>Team Leader & PHP Logic Developer</p>
                 </div>
                 <div class="team-member">
-                    <h3>Team Member 2</h3>
-                    <p>Role: Developer</p>
-                    <p style="color: #ccc; font-size: 0.9rem;">Frontend & design</p>
+                    <h3>Steven Acosta-Pliego</h3>
+                    <p>UI/UX Designer & CSS Specialist</p>
                 </div>
                 <div class="team-member">
-                    <h3>Team Member 3</h3>
-                    <p>Role: Developer</p>
-                    <p style="color: #ccc; font-size: 0.9rem;">Testing & documentation</p>
+                    <h3>Vincent Shoulars</h3>
+                    <p>Tester & Documentation Specialist</p>
                 </div>
             </div>
-            <p style="margin-top: 20px; color: #ccc; font-size: 0.9rem;">
-                <em>Update this section with your actual team member names and roles!</em>
-            </p>
         </div>
         
         <!-- Back to Game -->
