@@ -28,7 +28,6 @@ function startNewGame() {
     
     // Enhanced features
     $_SESSION['offer_history'] = []; // Track all banker offers
-    $_SESSION['market_event'] = null; // Track current market event
     $_SESSION['revealed_values'] = []; // Progressive value revelation
     $_SESSION['offer_expiration'] = null; // Strategic offer expiration
     $_SESSION['banker_strategy'] = 'neutral'; // neutral, bluff, pressure
@@ -66,28 +65,6 @@ function getRemainingValues() {
     return $values;
 }
 
-// Volatile Market Events - randomly alter briefcase values or offers
-function triggerMarketEvent() {
-    // 20% chance of market event each round
-    if (rand(1, 100) <= 20) {
-        $events = [
-            'bull_market' => ['msg' => 'Bull Market! Values increased 10%', 'modifier' => 1.10],
-            'bear_market' => ['msg' => 'Bear Market! Values decreased 10%', 'modifier' => 0.90],
-            'banker_generous' => ['msg' => 'Banker feeling generous today!', 'modifier' => 1.15],
-            'banker_stingy' => ['msg' => 'Banker being cautious...', 'modifier' => 0.85]
-        ];
-        
-        $eventKeys = array_keys($events);
-        $selectedEvent = $eventKeys[array_rand($eventKeys)];
-        $_SESSION['market_event'] = $events[$selectedEvent];
-        
-        return $events[$selectedEvent];
-    }
-    
-    $_SESSION['market_event'] = null;
-    return null;
-}
-
 // Calculate the Banker's offer with strategic elements
 function calculateBankerOffer() {
     $remainingValues = getRemainingValues();
@@ -117,11 +94,6 @@ function calculateBankerOffer() {
     
     // Calculate base offer
     $offer = $average * $multiplier * $strategyModifier;
-    
-    // Apply market event modifier if active
-    if ($_SESSION['market_event'] !== null) {
-        $offer *= $_SESSION['market_event']['modifier'];
-    }
     
     // Add volatility randomness (±5%)
     $randomFactor = (rand(95, 105) / 100);
@@ -181,11 +153,8 @@ function getRevealedValueRange() {
     return null;
 }
 
-// Move to banker offer phase with market events
+// Move to banker offer phase
 function moveToOfferPhase() {
-    // Trigger potential market event
-    $marketEvent = triggerMarketEvent();
-    
     $_SESSION['game_state'] = 'banker_offer';
     $offer = calculateBankerOffer();
     $_SESSION['current_offer'] = $offer;
