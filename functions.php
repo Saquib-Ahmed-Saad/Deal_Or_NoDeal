@@ -57,6 +57,7 @@ function getRemainingValues() {
         $remainingCases[] = $playerCase;
     }
     
+    //Used to get Banker value by putting case values in list
     $values = [];
     foreach ($remainingCases as $caseNum) {
         $values[] = $_SESSION['case_values'][$caseNum];

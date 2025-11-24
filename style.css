@@ -278,6 +278,7 @@ footer {
     font-weight: bold;
 }
 
+/*Effect for case button hover*/
 .case-button:hover:not(.opened-case):not(.player-case) {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 10px 30px rgba(255,215,0,0.5);
