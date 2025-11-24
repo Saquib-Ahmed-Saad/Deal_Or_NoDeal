@@ -10,14 +10,14 @@ Players choose a briefcase and progressively open other cases while the Banker m
 
 
 Deal_Or_NoDeal/
- -index.php          # Homepage with game intro and start button
- -game.php           # Main game board (handles all gameplay)
- -result.php         # Final results screen
- -about.php          # Rules, info, and team details
- -config.php         # Game configuration (money values, rounds)
- -introduction.php   # A seperate introduction page
- -functions.php      # All game logic functions
- -style.css          # Complete styling with animations
+ -index.php          # Homepage with game intro and start button.
+ -game.php           # Main game board (handles all gameplay).
+ -result.php         # Final results screen.
+ -about.php          # Rules, info, and team details.
+ -config.php         # Game configuration (money values, rounds).
+ -introduction.php   # A seperate introduction page.
+ -functions.php      # All game logic functions.
+ -style.css          # Complete styling with animations.
  -README.md          # This file
 
 
@@ -34,10 +34,10 @@ Game Flow
 
 Key Features
 
-Session Management: All game state stored in $_SESSION
-Random Shuffling: Each game has different case values
-Smart Banker AI: Offers calculated based on average of remaining values, round number, and random factor
-Progressive Rounds: Round 1 opens 5 cases, Round 2 opens 4 cases, Round 3 opens 3 cases, Round 4 opens 2 cases, Round 5+ opens 1 case each round
+Session Management: All game state stored in $_SESSION.
+Random Shuffling: Each game has different case values.
+Smart Banker AI: Offers calculated based on average of remaining values, round number, and random factor.
+Progressive Rounds: Round 1 opens 5 cases, Round 2 opens 4 cases, Round 3 opens 3 cases, Round 4 opens 2 cases, Round 5+ opens 1 case each round.
 
 Enhanced Features (Added)
 
@@ -58,52 +58,53 @@ Enhanced Features (Added)
 
 # Design Features
 
-Responsive Design: Works on desktop and mobile
-Smooth Animations: Flip animation when cases open, pulsing glow on player's case, slide-up effect for offers, hover effects on clickable elements
-Visual Feedback: Green/crossed out remaining values, different colors for different game states, clear indicators for which case is yours
+Responsive Design: Works on desktop and mobile.
+Smooth Animations: Flip animation when cases open, pulsing glow on player's case, slide-up effect for offers, hover effects on clickable elements.
+Visual Feedback: Green/crossed out remaining values, different colors for different game states, clear indicators for which case is yours.
 
 # Technical Concepts Used
 
-PHP Features
-Session management ($_SESSION)
-Form handling (POST requests)
-Functions and code organization
-Array manipulation (shuffle, array_filter)
-Conditional logic and game state machine
-Include/require statements
+PHP Features.
+Session management ($_SESSION).
+Form handling (POST requests).
+Functions and code organization.
+Array manipulation (shuffle, array_filter).
+Conditional logic and game state machine.
+Include/require statements.
 
 Frontend Features
-Semantic HTML5
-CSS Grid and Flexbox
-CSS Animations and Transitions
-Responsive design with media queries
-Modern gradient backgrounds
-Backdrop filters for glassmorphism effect
+
+Semantic HTML5.
+CSS Grid and Flexbox.
+CSS Animations and Transitions.
+Responsive design with media queries.
+Modern gradient backgrounds.
+Backdrop filters for glassmorphism effect.
 
 
 # Project Requirements Covered
 
 This project demonstrates:
 
-PHP session management
-Form processing (POST/GET)
-Dynamic content generation
-Game logic implementation
-CSS styling and animations
-Responsive web design
-User experience design
-Code organization (separate config, functions, pages)
-Banker strategic offers with history tracking
-Progressive value revelation
-Dynamic round structure
+PHP session management.
+Form processing (POST/GET).
+Dynamic content generation.
+Game logic implementation.
+CSS styling and animations.
+Responsive web design.
+User experience design.
+Code organization (separate config, functions, pages).
+Banker strategic offers with history tracking.
+Progressive value revelation.
+Dynamic round structure.
 
 # Game Configuration
 
 You can customize the game in config.php:
 
-Money values: Change the prize amounts
-Cases per round: Adjust difficulty
-Banker multipliers: Make offers more/less generous
+Money values: Change the prize amounts.
+Cases per round: Adjust difficulty.
+Banker multipliers: Make offers more/less generous.
 
 Example:
 ```php
@@ -124,16 +125,17 @@ define('BANKER_MULTIPLIERS', [
 
 Test these scenarios:
 
-Start a new game multiple times (values shuffle correctly)
-Choose different cases as yours
-Open cases in each round
-Cannot click on opened cases
-Cannot click on your own case
-Accept a Deal (see results)
-Reject all offers until final 2 cases
-Final choice: Keep vs Swap
-Play Again button works
-Mobile responsiveness
-Banker strategy hints display
-Value revelation appears after Round 3
-Offer expiration warnings show
+Start a new game multiple times (values shuffle correctly).
+Choose different cases as yours.
+Open cases in each round.
+Cannot click on opened cases.
+Cannot click on your own case.
+Accept a Deal (see results).
+Reject all offers until final 2 cases.
+Final choice: Keep vs Swap.
+Play Again button works.
+Mobile responsiveness.
+Banker strategy hints display.
+Value revelation appears after Round 3.
+Offer expiration warnings show.
+
